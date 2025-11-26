@@ -593,3 +593,119 @@ p {
     font-size: 2rem;
   }
 }
+
+/* Mobile and tablet fixes for home page */
+@media (max-width: 1024px) {
+  html,
+  body {
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .container {
+    height: auto;
+    min-height: 100vh;
+    padding: 1.5vh 1.5rem;
+  }
+
+  .header {
+    font-size: 0.7rem;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+  }
+
+  .eye-container {
+    height: 20vh;
+    margin-bottom: 1.5vh;
+  }
+
+  .content-wrapper {
+    gap: 1.5vh;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  p,
+  .sub-text {
+    font-size: 0.85rem;
+  }
+
+  .highlight-text {
+    font-size: 0.9rem;
+  }
+
+  .enter-button {
+    margin-bottom: 3vh;
+    padding: 0.7rem 2rem;
+    font-size: 0.75rem;
+  }
+
+  .language-switcher {
+    top: 1.5rem;
+    right: 1.5rem;
+    gap: 0.75rem;
+  }
+
+  .flag-icon {
+    width: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1vh 1rem;
+  }
+
+  .header {
+    font-size: 0.65rem;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+  }
+
+  .eye-container {
+    height: 18vh;
+    margin-bottom: 1vh;
+  }
+
+  .content-wrapper {
+    gap: 1vh;
+  }
+
+  .content-block {
+    padding: 0.3rem;
+  }
+
+  h1 {
+    font-size: 1.1rem;
+  }
+
+  p,
+  .sub-text {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .highlight-text {
+    font-size: 0.85rem;
+  }
+
+  .enter-button {
+    margin-bottom: 2vh;
+    padding: 0.6rem 1.5rem;
+    font-size: 0.7rem;
+  }
+
+  .language-switcher {
+    top: 1rem;
+    right: 1rem;
+    gap: 0.5rem;
+  }
+
+  .flag-icon {
+    width: 18px;
+  }
+}
