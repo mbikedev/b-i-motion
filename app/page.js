@@ -57,7 +57,14 @@ export default function Home() {
       <div className="line"></div>
 
       <header className="header">
-        {t.header}
+        <Image
+          src="/bim-logo.webp"
+          alt="Blueprint in Motion"
+          width={120}
+          height={120}
+          className="logo-image"
+          priority
+        />
       </header>
 
       <div className="eye-container">

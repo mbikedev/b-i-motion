@@ -69,7 +69,15 @@ body {
   font-weight: 400;
   margin-top: 2vh;
   margin-bottom: 2vh;
-  /* Reduced margin */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-image {
+  width: auto;
+  height: 18vh;
+  object-fit: contain;
 }
 
 .eye-container {
@@ -617,6 +625,10 @@ p {
     margin-bottom: 1.5vh;
   }
 
+  .logo-image {
+    height: 15vh;
+  }
+
   .eye-container {
     height: 20vh;
     margin-bottom: 1.5vh;
@@ -675,6 +687,10 @@ p {
     font-size: 0.8rem;
     margin-top: 1vh;
     margin-bottom: 1vh;
+  }
+
+  .logo-image {
+    height: 14vh;
   }
 
   .eye-container {
