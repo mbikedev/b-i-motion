@@ -99,8 +99,8 @@ body {
   flex-direction: column;
   gap: 2vh;
   /* Space between text blocks */
-  margin-bottom: auto;
-  /* Push button to bottom */
+  margin-bottom: 4vh;
+  /* Spacing to button */
 }
 
 .content-block {
@@ -140,7 +140,8 @@ p {
 }
 
 .enter-button {
-  margin-bottom: 4vh;
+  margin-top: 0;
+  margin-bottom: 3vh;
   background: transparent;
   border: 1px solid var(--foreground);
   color: var(--foreground);
@@ -639,7 +640,8 @@ p {
   }
 
   .enter-button {
-    margin-bottom: 3vh;
+    margin-top: 3vh;
+    margin-bottom: 2.5vh;
     padding: 0.7rem 2rem;
     font-size: 0.75rem;
   }
@@ -694,6 +696,7 @@ p {
   }
 
   .enter-button {
+    margin-top: 2vh;
     margin-bottom: 2vh;
     padding: 0.6rem 1.5rem;
     font-size: 0.7rem;
