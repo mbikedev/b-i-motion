@@ -63,7 +63,7 @@ body {
 }
 
 .header {
-  font-size: 0.8rem;
+  font-size: 1rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   font-weight: 400;
@@ -109,7 +109,7 @@ body {
 }
 
 h1 {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   /* Slightly smaller */
   font-weight: 500;
   text-transform: uppercase;
@@ -119,14 +119,14 @@ h1 {
 }
 
 p {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   color: #e0e0e0;
   font-weight: 300;
 }
 
 .highlight-text {
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.2rem;
@@ -134,19 +134,19 @@ p {
 }
 
 .sub-text {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 0.2rem;
 }
 
 .enter-button {
-  margin-top: 0;
+  margin-top: 4vh;
   margin-bottom: 3vh;
   background: transparent;
   border: 1px solid var(--foreground);
   color: var(--foreground);
   padding: 0.8rem 2.5rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   cursor: pointer;
@@ -612,7 +612,7 @@ p {
   }
 
   .header {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     margin-top: 1.5vh;
     margin-bottom: 1.5vh;
   }
@@ -627,23 +627,32 @@ p {
   }
 
   h1 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   p,
   .sub-text {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
 
   .highlight-text {
-    font-size: 0.9rem;
+    font-size: 1.15rem;
   }
 
   .enter-button {
-    margin-top: 3vh;
+    margin-top: 5vh;
     margin-bottom: 2.5vh;
     padding: 0.7rem 2rem;
-    font-size: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .line {
+    bottom: 25vh;
+    background: linear-gradient(to bottom,
+        transparent 0%,
+        var(--gold) 20%,
+        var(--gold) 65%,
+        transparent 85%);
   }
 
   .language-switcher {
@@ -663,7 +672,7 @@ p {
   }
 
   .header {
-    font-size: 0.65rem;
+    font-size: 0.8rem;
     margin-top: 1vh;
     margin-bottom: 1vh;
   }
@@ -682,24 +691,33 @@ p {
   }
 
   h1 {
-    font-size: 1.1rem;
+    font-size: 1.35rem;
   }
 
   p,
   .sub-text {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     line-height: 1.4;
   }
 
   .highlight-text {
-    font-size: 0.85rem;
+    font-size: 1.05rem;
   }
 
   .enter-button {
-    margin-top: 2vh;
+    margin-top: 4vh;
     margin-bottom: 2vh;
     padding: 0.6rem 1.5rem;
-    font-size: 0.7rem;
+    font-size: 0.85rem;
+  }
+
+  .line {
+    bottom: 22vh;
+    background: linear-gradient(to bottom,
+        transparent 0%,
+        var(--gold) 20%,
+        var(--gold) 60%,
+        transparent 80%);
   }
 
   .language-switcher {
