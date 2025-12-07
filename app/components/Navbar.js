@@ -34,7 +34,9 @@ const FlagUK = () => (
 
 export default function Navbar({ lang, setLang }) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const { data: session, status } = useSession();
+    const sessionResult = useSession();
+    const session = sessionResult?.data;
+    const status = sessionResult?.status || "loading";
     const t = translations[lang];
 
     const toggleMobileMenu = () => {
