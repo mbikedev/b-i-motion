@@ -34,6 +34,7 @@ const FlagUK = () => (
 
 export default function Navbar({ lang, setLang }) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [isLoggingOut, setIsLoggingOut] = useState(false);
     const sessionResult = useSession();
     const session = sessionResult?.data;
     const status = sessionResult?.status || "loading";
@@ -43,8 +44,15 @@ export default function Navbar({ lang, setLang }) {
         setMobileMenuOpen(!mobileMenuOpen);
     };
 
-    const handleSignOut = () => {
-        signOut({ callbackUrl: "/" });
+    const handleSignOut = async () => {
+        setIsLoggingOut(true);
+        try {
+            await signOut({ redirect: false });
+            window.location.href = "/";
+        } catch (error) {
+            console.error("Logout error:", error);
+            setIsLoggingOut(false);
+        }
     };
 
     return (
@@ -73,13 +81,17 @@ export default function Navbar({ lang, setLang }) {
 
                 {/* Auth Buttons */}
                 <div className="navbar-auth">
-                    {status === "loading" ? (
+                    {status === "loading" || isLoggingOut ? (
                         <span className="auth-loading">...</span>
                     ) : session ? (
                         <>
                             <span className="user-name">{session.user?.name}</span>
-                            <button onClick={handleSignOut} className="auth-btn logout-btn">
-                                {t.auth?.logout || "Logout"}
+                            <button
+                                onClick={handleSignOut}
+                                className="auth-btn logout-btn"
+                                disabled={isLoggingOut}
+                            >
+                                {isLoggingOut ? "Logging out..." : (t.auth?.logout || "Logout")}
                             </button>
                         </>
                     ) : (
@@ -137,8 +149,12 @@ export default function Navbar({ lang, setLang }) {
                 {session ? (
                     <>
                         <span className="mobile-user-name">{session.user?.name}</span>
-                        <button onClick={() => { handleSignOut(); setMobileMenuOpen(false); }} className="mobile-auth-btn">
-                            {t.auth?.logout || "Logout"}
+                        <button
+                            onClick={() => { handleSignOut(); setMobileMenuOpen(false); }}
+                            className="mobile-auth-btn"
+                            disabled={isLoggingOut}
+                        >
+                            {isLoggingOut ? "Logging out..." : (t.auth?.logout || "Logout")}
                         </button>
                     </>
                 ) : (
