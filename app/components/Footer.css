@@ -43,7 +43,6 @@
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
-  transition: all 0.3s ease;
   font-size: 1rem;
 }
 
@@ -54,7 +53,6 @@
 
 .cta-btn.primary:hover {
   background-color: #e0b856;
-  transform: translateY(-2px);
 }
 
 .cta-btn.secondary {
@@ -65,7 +63,6 @@
 
 .cta-btn.secondary:hover {
   background-color: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
 }
 
 /* Main Footer Sections */
@@ -109,7 +106,6 @@
   color: #ffffff;
   font-family: inherit;
   font-size: 1rem;
-  transition: border-color 0.3s ease;
 }
 
 .contact-form input::placeholder,
@@ -137,13 +133,11 @@
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
   align-self: flex-start;
 }
 
 .submit-btn:hover {
   background-color: #e0b856;
-  transform: translateY(-2px);
 }
 
 /* Footer Links */
@@ -160,7 +154,6 @@
 .footer-links a {
   color: #b8c5d6;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
@@ -187,7 +180,6 @@
   border-radius: 50%;
   background-color: transparent;
   color: #b8c5d6;
-  transition: all 0.3s ease;
 }
 
 .social-links a:hover {
@@ -209,6 +201,19 @@
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+.footer-branding {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.footer-logo-image {
+  width: auto;
+  height: 60px;
+  object-fit: contain;
 }
 
 .footer-branding h4 {
@@ -242,5 +247,9 @@
   .footer-bottom {
     flex-direction: column;
     text-align: center;
+  }
+
+  .footer-branding {
+    align-items: center;
   }
 }

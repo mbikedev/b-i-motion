@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { translations } from "../translations";
 
 const FlagNL = () => (
@@ -42,7 +43,14 @@ export default function Navbar({ lang, setLang }) {
         <nav className="navbar">
             <div className="navbar-container">
                 <Link href="/" className="navbar-logo">
-                    Blueprint In Motion
+                    <Image
+                        src="/bim-logo.webp"
+                        alt="Blueprint in Motion"
+                        width={40}
+                        height={40}
+                        className="navbar-logo-image"
+                        priority
+                    />
                 </Link>
 
                 {/* Desktop Navigation */}

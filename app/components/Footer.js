@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import "./Footer.css";
 
 export default function Footer({ translations }) {
@@ -123,7 +124,13 @@ export default function Footer({ translations }) {
         {/* Bottom Section */}
         <div className="footer-bottom">
           <div className="footer-branding">
-            <h4>Blueprint In Motion</h4>
+            <Image
+              src="/bim-logo.webp"
+              alt="Blueprint in Motion"
+              width={60}
+              height={60}
+              className="footer-logo-image"
+            />
             <p>{translations?.footer?.tagline || "Van Overleven naar Nalatenschap"}</p>
           </div>
           <div className="footer-copyright">
