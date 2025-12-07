@@ -643,6 +643,12 @@ p {
   }
 }
 
+@media (min-width: 769px) {
+  .navbar-auth {
+    display: flex !important;
+  }
+}
+
 @media (max-width: 768px) {
   .about-header-content {
     flex-direction: column;

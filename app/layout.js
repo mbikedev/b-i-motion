@@ -1,5 +1,6 @@
 import { Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
+import Providers from "./providers";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -16,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cormorant.className} suppressHydrationWarning>
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
