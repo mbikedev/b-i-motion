@@ -43,9 +43,17 @@ export async function POST(request) {
             );
         }
 
+        if (error.message?.includes("Supabase not configured")) {
+            console.error("Registration error: Supabase not configured");
+            return NextResponse.json(
+                { error: "Service temporarily unavailable. Please contact support." },
+                { status: 503 }
+            );
+        }
+
         console.error("Registration error:", error);
         return NextResponse.json(
-            { error: "Something went wrong" },
+            { error: "Something went wrong. Please try again later." },
             { status: 500 }
         );
     }
