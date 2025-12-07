@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useSession, signOut } from "next-auth/react";
 import { translations } from "../translations";
 
 const FlagNL = () => (
@@ -33,10 +34,15 @@ const FlagUK = () => (
 
 export default function Navbar({ lang, setLang }) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const { data: session, status } = useSession();
     const t = translations[lang];
 
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!mobileMenuOpen);
+    };
+
+    const handleSignOut = () => {
+        signOut({ callbackUrl: "/" });
     };
 
     return (
@@ -60,6 +66,29 @@ export default function Navbar({ lang, setLang }) {
                     <Link href="/boeken">{t.nav.boeken}</Link>
                     <Link href="/fieldtalks">{t.nav.fieldtalks}</Link>
                     <Link href="/integriteit">{t.nav.integriteit}</Link>
+                </div>
+
+                {/* Auth Buttons */}
+                <div className="navbar-auth">
+                    {status === "loading" ? (
+                        <span className="auth-loading">...</span>
+                    ) : session ? (
+                        <>
+                            <span className="user-name">{session.user?.name}</span>
+                            <button onClick={handleSignOut} className="auth-btn logout-btn">
+                                {t.auth?.logout || "Logout"}
+                            </button>
+                        </>
+                    ) : (
+                        <>
+                            <Link href="/login" className="auth-btn login-btn">
+                                {t.auth?.login || "Login"}
+                            </Link>
+                            <Link href="/register" className="auth-btn register-btn">
+                                {t.auth?.register || "Register"}
+                            </Link>
+                        </>
+                    )}
                 </div>
 
                 {/* Language Switcher */}
@@ -101,6 +130,20 @@ export default function Navbar({ lang, setLang }) {
                 <Link href="/boeken" onClick={() => setMobileMenuOpen(false)}>{t.nav.boeken}</Link>
                 <Link href="/fieldtalks" onClick={() => setMobileMenuOpen(false)}>{t.nav.fieldtalks}</Link>
                 <Link href="/integriteit" onClick={() => setMobileMenuOpen(false)}>{t.nav.integriteit}</Link>
+                <div className="mobile-menu-divider"></div>
+                {session ? (
+                    <>
+                        <span className="mobile-user-name">{session.user?.name}</span>
+                        <button onClick={() => { handleSignOut(); setMobileMenuOpen(false); }} className="mobile-auth-btn">
+                            {t.auth?.logout || "Logout"}
+                        </button>
+                    </>
+                ) : (
+                    <>
+                        <Link href="/login" onClick={() => setMobileMenuOpen(false)}>{t.auth?.login || "Login"}</Link>
+                        <Link href="/register" onClick={() => setMobileMenuOpen(false)}>{t.auth?.register || "Register"}</Link>
+                    </>
+                )}
             </div>
         </nav>
     );
