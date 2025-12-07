@@ -14,16 +14,20 @@ To deploy this application on Netlify, you need to configure the following envir
 
 #### Supabase Configuration
 ```
-NEXT_PUBLIC_SUPABASE_URL=https://srcewloqkkltlbbkowbk.supabase.co
+NEXT_PUBLIC_SUPABASE_URL=<your-supabase-project-url>
 ```
+Get this from: Supabase Dashboard → Project Settings → API → Project URL
 
 ```
-NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNyY2V3bG9xa2tsdGxiYmtvd2JrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUxMTkwMjUsImV4cCI6MjA4MDY5NTAyNX0.IzTHFo3thtywZ0y_0U8xhlZXNCiHmdUnAXqN7lMP1rk
+NEXT_PUBLIC_SUPABASE_ANON_KEY=<your-supabase-anon-key>
 ```
+Get this from: Supabase Dashboard → Project Settings → API → Project API keys → anon public
 
 ```
-SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNyY2V3bG9xa2tsdGxiYmtvd2JrIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2NTExOTAyNSwiZXhwIjoyMDgwNjk1MDI1fQ.Uf9DsxZyBstOl7dybRHGop35s4cZU4XweO4F0BZY2sA
+SUPABASE_SERVICE_ROLE_KEY=<your-supabase-service-role-key>
 ```
+Get this from: Supabase Dashboard → Project Settings → API → Project API keys → service_role
+⚠️ **WARNING**: This key bypasses Row Level Security. Keep it secret!
 
 #### NextAuth Configuration
 ```
