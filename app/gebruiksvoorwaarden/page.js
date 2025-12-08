@@ -24,7 +24,7 @@ export default function TermsOfUse() {
         <section style={{ marginBottom: '3rem' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '1rem', color: '#1a2332' }}>2. Intellectueel eigendom</h2>
           <p style={{ marginBottom: '1rem' }}>
-            Alle inhoud op deze website, inclusief maar niet beperkt tot tekst, afbeeldingen, logo's, en software, is eigendom van
+            Alle inhoud op deze website, inclusief maar niet beperkt tot tekst, afbeeldingen, logo&apos;s, en software, is eigendom van
             Blueprint In Motion of haar licentiegevers en wordt beschermd door Nederlandse en internationale auteurswetten.
           </p>
           <p style={{ marginBottom: '1rem' }}>

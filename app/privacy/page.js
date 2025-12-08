@@ -16,7 +16,7 @@ export default function Privacy() {
         <section style={{ marginBottom: '3rem' }}>
           <h2 style={{ fontSize: '1.8rem', marginBottom: '1rem', color: '#1a2332' }}>1. Inleiding</h2>
           <p style={{ marginBottom: '1rem' }}>
-            Blueprint In Motion ("wij", "ons", "onze") respecteert uw privacy en zet zich in voor de bescherming van uw persoonlijke gegevens.
+            Blueprint In Motion (&quot;wij&quot;, &quot;ons&quot;, &quot;onze&quot;) respecteert uw privacy en zet zich in voor de bescherming van uw persoonlijke gegevens.
             Dit privacybeleid informeert u over hoe wij omgaan met uw persoonlijke gegevens wanneer u onze website bezoekt en vertelt u over uw privacyrechten.
           </p>
         </section>
